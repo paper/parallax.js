@@ -83,13 +83,6 @@ $('.pages').parallax({
 		
 ```
 
-## Log
-
-* v 0.1
-	* 提供三种翻页动画
-	* 提供横竖屏翻页操作
-	* 解决 iOS 和 Android 的兼容问题
-
 
 
 ## License
