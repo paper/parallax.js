@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="hahnzhu" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Demo</title>
+	<link rel="stylesheet" href="css/parallax.min.css">
+	<link rel="stylesheet" href="css/parallax-animation.min.css">
+	<style>
+	/* custom */
+	section[data-id="1"] {
+		background-color: #3498db;
+	}
+	section[data-id="2"] {
+		background-color: #40d47e;
+	}
+	section[data-id="3"] {
+		background-color: #ff8c81;
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="pages">
+		<!-- 第一屏 -->
+		<section class="page">
+			
+		</section>
+
+        <!-- 第二屏 -->
+		<section class="page">
+			
+		</section>
+
+        <!-- 第三屏 -->
+		<section class="page">
+			
+		</section>
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/parallax.js"></script>
+<script>
+	
+	$('.pages').parallax({
+		swipeAnim: 'default',
+		direction: 'vertical',
+		drag: true,
+		// loading: true,
+		// indicator: true,
+		// arrow: true,
+		orientationchange: function(orientation) {
+			// orientation：protrait、landscape
+		},
+		callback: function(index, element, direction) {
+			// index：第几页（1、2、3...）
+			// element：当前DOM元素
+			// direction：前翻（forward）、后翻（backward）、当前页（stay）
+		}
+	});
+
+
+</script>
+</body>
+</html>
