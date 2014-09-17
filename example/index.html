@@ -21,50 +21,73 @@
 	section[data-id="3"] {
 		background-color: #ff8c81;
 	}
-	h2 {
-		width: 100%;
-		color: #fff;
-		font-size: 20px;
-		top: 100px;
-		left: 0;
-		text-align: center;
+	section[data-id="4"] {
+		background-color: #3498db;
+	}
+	.box1 {
+		width: 100px;
+		height: 200px;
+		background-color: #ecf0f1;
 		position: absolute;
-
+		left: 160px; top: 126px;
 	}
-	.page h2:first-child {
-			
+	.box2 {
+		width: 200px;
+		height: 100px;
+		background-color: #8e44ad;
+		position: absolute;
+		left: 60px; top: 226px;
 	}
-	.page h2:nth-child(2) {
-		top: 150px;
+	.box3 {
+		width: 100px;
+		height: 100px;
+		background-color: #34495e;
+		position: absolute;
+		left: 160px; top: 226px;
 	}
-	.page h2:nth-child(3) {
-		top: 200px;
-	}
-	.page h2:nth-child(4) {
-		top: 250px;
+	.box4 {
+		width: 50px;
+		height: 50px;
+		background-color: #e74c3c;
+		position: absolute;
+		left: 185px; top: 250px;
 	}
 	</style>
 </head>
 <body>
 <div class="wrapper">
 	<div class="pages">
+
 		<!-- 第一屏 -->
 		<section class="page">
-			<h2 data-animation="slideToLeft" data-duration="1000" data-delay="300">slideToLeft</h2>
-			<h2 data-animation="slideToRight" data-timing-function="linear">slideToRight</h2>
-			<h2 data-animation="slideToTop">slideToTop</h2>
-			<h2 data-animation="slideToBottom">slideToBottom</h2>
+			<div class="box1" data-animation="slideToBottom" data-timing-function="ease-in"></div>
+			<div class="box2" data-animation="slideToTop" data-delay="300" data-timing-function="ease-out"></div>
+			<div class="box3" data-animation="slideToRight" data-delay="600" data-timing-function="linear"></div>
+			<div class="box4" data-animation="slideToLeft" data-delay="900" data-timing-function="cubic-bezier(.12,.73,.62,1.38)"></div>
 		</section>
 
         <!-- 第二屏 -->
 		<section class="page">
-			
+			<div class="box1" data-animation="followSlide" data-duration="1000"></div>
+			<div class="box2" data-animation="followSlide" data-delay="200" data-duration="1000"></div>
+			<div class="box3" data-animation="followSlide" data-delay="400" data-duration="1000"></div>
+			<div class="box4" data-animation="followSlide" data-delay="600" data-duration="1000"></div>
 		</section>
 
         <!-- 第三屏 -->
 		<section class="page">
-			
+			<div class="box1" data-animation="fadeInToBottom"></div>
+			<div class="box2" data-animation="fadeInToTop" data-delay="200"></div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400"></div>
+			<div class="box4" data-animation="fadeInToRight" data-delay="600"></div>
 		</section>
+
+		<!-- 第四屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeIn"></div>
+			<div class="box2" data-animation="fadeOut" data-delay="800"></div>
+		</section>
+
 	</div>
 </div>
 <script src="js/zepto.min.js"></script>
@@ -72,19 +95,28 @@
 <script>
 	
 	$('.pages').parallax({
-		// swipeAnim: 'default', 
-		// direction: 'vertical',
-		// drag: true,
-		// loading: true,
-		// indicator: true,
-		// arrow: true,
-		orientationchange: function(orientation) {
-			// orientation：protrait、landscape
+		direction: 'vertical', 	// horizontal (水平翻页)
+		swipeAnim: 'default', 	// cover (切换效果)
+		drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
+		loading:   false,		// 有无加载页
+		indicator: false,		// 有无指示点
+		arrow:     false,		// 有无指示箭头
+		/*
+		 * 翻页后立即执行
+		 * {int} 		index: 第几页
+		 * {DOMElement} element: 当前页节点
+		 * {String}		directation: forward(前翻)、backward(后翻)、stay(保持原页)
+		 */
+		onchange: function(index, element, direction) {
+			// code here...
+			// console.log(index, element, direction);
 		},
-		callback: function(index, element, direction) {
-			// index：第几页（1、2、3...）
-			// element：当前DOM元素
-			// direction：forward（前翻）、backward（后翻）、stay（当前页）
+		/*
+		 * 横竖屏检测
+		 * {String}		orientation: landscape、protrait
+		 */
+		orientationchange: function(orientation) {
+			// console.log(orientation);
 		}
 	});
 
