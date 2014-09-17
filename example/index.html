@@ -21,6 +21,28 @@
 	section[data-id="3"] {
 		background-color: #ff8c81;
 	}
+	h2 {
+		width: 100%;
+		color: #fff;
+		font-size: 20px;
+		top: 100px;
+		left: 0;
+		text-align: center;
+		position: absolute;
+
+	}
+	.page h2:first-child {
+			
+	}
+	.page h2:nth-child(2) {
+		top: 150px;
+	}
+	.page h2:nth-child(3) {
+		top: 200px;
+	}
+	.page h2:nth-child(4) {
+		top: 250px;
+	}
 	</style>
 </head>
 <body>
@@ -28,7 +50,10 @@
 	<div class="pages">
 		<!-- 第一屏 -->
 		<section class="page">
-			
+			<h2 data-animation="slideToLeft" data-duration="1000" data-delay="300">slideToLeft</h2>
+			<h2 data-animation="slideToRight" data-timing-function="linear">slideToRight</h2>
+			<h2 data-animation="slideToTop">slideToTop</h2>
+			<h2 data-animation="slideToBottom">slideToBottom</h2>
 		</section>
 
         <!-- 第二屏 -->
@@ -47,9 +72,9 @@
 <script>
 	
 	$('.pages').parallax({
-		swipeAnim: 'default',
-		direction: 'vertical',
-		drag: true,
+		// swipeAnim: 'default', 
+		// direction: 'vertical',
+		// drag: true,
 		// loading: true,
 		// indicator: true,
 		// arrow: true,
@@ -59,7 +84,7 @@
 		callback: function(index, element, direction) {
 			// index：第几页（1、2、3...）
 			// element：当前DOM元素
-			// direction：前翻（forward）、后翻（backward）、当前页（stay）
+			// direction：forward（前翻）、backward（后翻）、stay（当前页）
 		}
 	});
 

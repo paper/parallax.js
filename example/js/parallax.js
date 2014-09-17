@@ -1,3 +1,10 @@
+/**
+ * @author  : hahnzhu
+ * @version : 0.2
+ * @date    : 2014-09-17
+ * @repository: https://github.com/hahnzhu/parallax.js
+ */
+
 if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requires Zepto') }
 
 !function($) {
@@ -435,7 +442,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
                 $animation  = $element.attr('data-animation'),
                 $duration   = $element.attr('data-duration') || 500,
                 $timfunc    = $element.attr('data-timing-function') || 'ease',
-                $delay      = $element.attr('data-delay') ?  $element.attr('data-delay') : 300;
+                $delay      = $element.attr('data-delay') ?  $element.attr('data-delay') : 0;
 
 
             if ($animation === 'followSlide') {
@@ -456,8 +463,8 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
             }
 
             $element.css({
-                '-webkit-animation': $animation +' '+ $duration + 'ms ' + $timfunc + ' '+ $delay + 'ms forwards',
-                'animation': $animation +' '+ $duration + 'ms ' + $timfunc + ' '+ $delay + 'ms forwards'
+                '-webkit-animation': $animation +' '+ $duration + 'ms ' + $timfunc + ' '+ $delay + 'ms both',
+                'animation': $animation +' '+ $duration + 'ms ' + $timfunc + ' '+ $delay + 'ms both'
             })
         });
     }
