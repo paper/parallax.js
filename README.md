@@ -104,7 +104,7 @@ $('.pages').parallax({
 	<div class="pages vertical/horizontal  default/cover  forward/backward">
 		
 		<!-- 为 page 添加 data-id，当前 page 会自动添加 current 类(翻页后立即添加) -->
-		<section data-id="1">
+		<section data-id="1" class="current">
 			...
 		</section>
 
@@ -118,7 +118,7 @@ $('.pages').parallax({
 
 
 ### 四、内置动画
-有四种内置动画，分别是 `slideToTop/Bottom/Left/Right`、`fadeInToTop/Bottom/Left/Right`、`followSlide` 和 `fadeIn/Out`，动画参数可通过 `data-animation`、`data-duration`、`data-delay` 和 `data-timing-function` 进行配置。
+有四种内置动画，分别是 `slideToTop/Bottom/Left/Right`、 `fadeInToTop/Bottom/Left/Right`、 `followSlide` 和 `fadeIn/Out`，动画参数可通过 `data-animation`、 `data-duration`、 `data-delay` 和 `data-timing-function` 进行配置。
 
 可看以下实例：
 ```html
