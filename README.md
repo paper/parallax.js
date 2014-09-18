@@ -121,12 +121,15 @@ $('.pages').parallax({
 ```
 
 __DEMO1__
+
 ![DEMO1](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo1.gif)
 
 __DEMO2__
+
 ![DEMO2](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo2.gif)
 
 __DEMO3__
+
 ![DEMO3](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo3.gif)
 
 
@@ -147,9 +150,11 @@ $('.pages').parallax({
 ```
 
 __DEMO4__
+
 ![DEMO4](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo4.gif)
 
 __DEMO5__
+
 ![DEMO5](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo5.gif)
 
 
@@ -182,6 +187,7 @@ __DEMO5__
 可看以下实例：
 
 __EXAMPLE__
+
 ![EXAMPLE](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/example.gif)
 
 ```html
