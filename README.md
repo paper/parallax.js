@@ -48,8 +48,8 @@ CSS 引用：
 
 JS 引用：
 ```js
-<script src="{your path}/zepto.min.js"><\/script>
-<script src="{your path}/parallax.js"><\/script>
+<script src="{your path}/zepto.min.js"></script>
+<script src="{your path}/parallax.js"></script>
 <script>
   $('.pages').parallax();
 </script>
@@ -90,8 +90,67 @@ $('.pages').parallax({
 ```
 
 #### 具体参数演示
+```js
+// DEMO1(默认)
+<script>
+$('.pages').parallax({
+	loading:   false,
+	indicator: false,
+	arrow:     false
+});
+</script>
+
+// DEMO2
+<script>
+$('.pages').parallax({
+	loading:   true,
+	indicator: true,
+	arrow:     true
+});
+</script>
+
+// DEMO3
+<script>
+$('.pages').parallax({
+	direction: 'horizontal',
+	loading:   true,
+	indicator: true,
+	arrow:     true
+});
+</script>
+```
+
+__DEMO1__
+![DEMO1](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo1.gif)
+
+__DEMO2__
+![DEMO2](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo2.gif)
+
+__DEMO3__
+![DEMO3](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo3.gif)
 
 
+```js
+// DEMO4(默认)
+<script>
+$('.pages').parallax({
+	swipeAnim: 'default'
+});
+</script>
+
+// DEMO5
+<script>
+$('.pages').parallax({
+	swipeAnim: 'cover'
+});
+</script>
+```
+
+__DEMO4__
+![DEMO4](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo4.gif)
+
+__DEMO5__
+![DEMO5](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo5.gif)
 
 
 
@@ -121,6 +180,10 @@ $('.pages').parallax({
 有四种内置动画，分别是 `slideToTop/Bottom/Left/Right`、 `fadeInToTop/Bottom/Left/Right`、 `followSlide` 和 `fadeIn/Out`，动画参数可通过 `data-animation`、 `data-duration`、 `data-delay` 和 `data-timing-function` 进行配置。
 
 可看以下实例：
+
+__EXAMPLE__
+![EXAMPLE](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/example.gif)
+
 ```html
 <div class="wrapper">
 	<div class="pages">
@@ -204,8 +267,14 @@ section[data-id="4"] {
 }
 ```
 
+注：followSlide 效果会根据翻页方向的不同而改变，如下：
+
+![followSlide1](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/followSlide1.gif) &nbsp;&nbsp;&nbsp;&nbsp;
+![followSlide2](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/followSlide2.gif)
 
 
+
+---
 
 ## License
 

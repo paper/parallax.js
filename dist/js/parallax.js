@@ -59,7 +59,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
         loading: false,         // 是否需要加载页
         indicator: false,       // 是否要有指示导航
         arrow: false,           // 是否要有箭头
-        callback: function(){}, // 回调函数
+        onchange: function(){}, // 回调函数
         orientationchange: function(){} // 屏幕翻转
 
     };
@@ -111,7 +111,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
 
         if (!options.loading) {
             $($pageArr[curPage]).addClass('current');
-            options.callback(curPage, $pageArr[curPage], direction);
+            options.onchange(curPage, $pageArr[curPage], direction);
             animShow();
         }
 
@@ -496,7 +496,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
                 }, 10);
     
                 $($pageArr.removeClass('current').get(curPage)).addClass('current');
-                options.callback(curPage, $pageArr[curPage], direction);  // 执行回调函数
+                options.onchange(curPage, $pageArr[curPage], direction);  // 执行回调函数
                 animShow();
             }
             
@@ -518,7 +518,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
             $(".parallax-loading").remove();
             movePrevent = false;
             $($pageArr[curPage]).addClass('current');
-            options.callback(curPage, $pageArr[curPage], direction);
+            options.onchange(curPage, $pageArr[curPage], direction);
             animShow();
         }
 
