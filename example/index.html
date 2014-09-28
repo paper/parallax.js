@@ -52,13 +52,6 @@
 		position: absolute;
 		left: 185px; top: 250px;
 	}
-	section[data-id="2"] h2 {
-		color: #fff;
-		font-weight: 700;
-		font-size: 60px;
-		text-align: center;
-		margin-top: 20px;
-	}
 	</style>
 </head>
 <body>
@@ -104,7 +97,7 @@
 	
 	$('.pages').parallax({
 		direction: 'vertical', 	// horizontal (水平翻页)
-		swipeAnim: 'default', 	// cover (切换效果)
+		swipeAnim: 'cover', 	// cover (切换效果)
 		drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
 		loading:   false,		// 有无加载页
 		indicator: false,		// 有无指示点

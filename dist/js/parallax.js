@@ -1,6 +1,6 @@
 /**
  * @author  : hahnzhu
- * @version : 0.2.1
+ * @version : 0.2.2
  * @date    : 2014-09-28
  * @repository: https://github.com/hahnzhu/parallax.js
  */
@@ -43,7 +43,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
             $pages = $(this);
             $pageArr = $pages.find('.page');
 
-            init();     // 执行初始化操作
+            init();
         })
     }
 
@@ -435,7 +435,11 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
 
     function animShow() {
         
-        $animateDom.css({'-webkit-animation': 'none'});
+        $animateDom.css({
+        	'-webkit-animation': 'none',
+        	'display': 'none'	// 解决部分 Android 机型 DOM 不自动重绘的 bug
+        	});
+
         
         $('.current [data-animation]').each(function(index, element){
             var $element    = $(element),
@@ -464,6 +468,8 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
 
             $element.css({
 //              '-webkit-animation': $animation +' '+ $duration + 'ms ' + $timfunc + ' '+ $delay + 'ms both',
+				
+				'display': 'block',
 				
 				// 为了兼容不支持贝塞尔曲线的动画，需要拆开写
 				// 严格模式下不允许出现两个同名属性，所以不得已去掉 'use strict'
