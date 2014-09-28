@@ -51,15 +51,11 @@ body {
 }
 .ui-loading-white {
 	width: 37px;
-	height: 37px;
+	height: 37px; 
 	display: block;
 	background-image: url(../img/loading_sprite_white.png);
 	background-size: auto 37px;
 	animation: rotate 1s steps(12) infinite;
-}
-@-webkit-keyframes rotate {
-    from { background-position: 0 0; }
-    to { background-position: -444px 0; }
 }
 @keyframes rotate {
     from { background-position: 0 0; }
@@ -80,9 +76,7 @@ body {
 	height: 10px;
 	background-color: rgba(0,0,0,.3);
 	border-radius: 5px;
-	text-indent: -9999em;
 	margin-left: 5px;
-	overflow: hidden;
 }
 .parallax-h-indicator ul li:first-child {
 	margin: 0;
@@ -104,7 +98,6 @@ body {
 	height: 10px;
 	background-color: rgba(0,0,0,.3);
 	border-radius: 5px;
-	text-indent: -9999em;
 	margin-top: 5px;
 }
 .parallax-v-indicator ul li:first-child {
@@ -130,20 +123,10 @@ body {
 	transform: translateX(-50%) rotate(0deg);
 }
 .horizontal .current .parallax-arrow {
-	animation: harrow 1500ms infinite ease 300ms;
+	animation: harrow 1500ms 300ms ease infinite;
 }
 .vertical .current .parallax-arrow {
-	animation: varrow 1500ms infinite ease 300ms;
-}
-@-webkit-keyframes varrow {
-	from {
-		opacity: 0;
-		transform: translate3d(-50%,10px,0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(-50%,0,0);
-	}
+	animation: varrow 1500ms 300ms ease infinite;
 }
 @keyframes varrow {
 	from {
@@ -153,16 +136,6 @@ body {
 	to {
 		opacity: 1;
 		transform: translate3d(-50%,0,0);
-	}
-}
-@-webkit-keyframes harrow {
-	from {
-		opacity: 0;
-		transform: translate3d(0,-50%,0) rotate(-90deg);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(-10px,-50%,0) rotate(-90deg);
 	}
 }
 @keyframes harrow {
@@ -208,14 +181,6 @@ body {
 .animate.cover.forward.vertical .front {
 	animation-name: cover2top;
 }
-@-webkit-keyframes cover2top {
-	from {
-		transform: translateY(100%);
-	}
-	to {
-		transform: translateY(0%);
-	}
-}
 @keyframes cover2top {
 	from {
 		transform: translateY(100%);
@@ -235,14 +200,6 @@ body {
 }
 .animate.cover.forward.horizontal .front {
 	animation-name: cover2left;
-}
-@-webkit-keyframes cover2left {
-	from {
-		transform: translateX(100%);
-	}
-	to {
-		transform: translateX(0%);
-	}
 }
 @keyframes cover2left {
 	from {
@@ -264,14 +221,6 @@ body {
 .animate.cover.backward.vertical .front {
 	animation-name: cover2bottom;
 }
-@-webkit-keyframes cover2bottom {
-	from {
-		transform: translateY(-100%);
-	}
-	to {
-		transform: translateY(0%);
-	}
-}
 @keyframes cover2bottom {
 	from {
 		transform: translateY(-100%);
@@ -291,14 +240,6 @@ body {
 }
 .animate.cover.backward.horizontal .front {
 	animation-name: cover2right;
-}
-@-webkit-keyframes cover2right {
-	from {
-		transform: translateX(-100%);
-	}
-	to {
-		transform: translateX(0%);
-	}
 }
 @keyframes cover2right {
 	from {
