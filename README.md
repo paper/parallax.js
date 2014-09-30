@@ -40,16 +40,16 @@ parallax.js
 
 CSS 引用：
 ```css
-<style rel="stylesheet" href="{your path}/parallax.css"></style>
+<style rel="stylesheet" href="path/to/parallax.css"></style>
 
 /* 如果需要使用内置动画，需要引用下面的内容 */
-<style rel="stylesheet" href="{your path}/parallax-animation.css"></style>
+<style rel="stylesheet" href="path/to/parallax-animation.css"></style>
 ```
 
 JS 引用：
 ```js
-<script src="{your path}/zepto.min.js"></script>
-<script src="{your path}/parallax.js"></script>
+<script src="path/to/zepto.min.js"></script>
+<script src="path/to/parallax.js"></script>
 <script>
   $('.pages').parallax();
 </script>
