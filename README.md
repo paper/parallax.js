@@ -100,7 +100,14 @@ $('.pages').parallax({
 	arrow:     false
 });
 </script>
+```
 
+__DEMO1__
+
+![DEMO1](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo1.gif)
+
+
+```js
 // DEMO2
 <script>
 $('.pages').parallax({
@@ -109,7 +116,13 @@ $('.pages').parallax({
 	arrow:     true
 });
 </script>
+```
 
+__DEMO2__
+
+![DEMO2](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo2.gif)
+
+```js
 // DEMO3
 <script>
 $('.pages').parallax({
@@ -120,15 +133,6 @@ $('.pages').parallax({
 });
 </script>
 ```
-
-__DEMO1__
-
-![DEMO1](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo1.gif)
-
-__DEMO2__
-
-![DEMO2](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo2.gif)
-
 __DEMO3__
 
 ![DEMO3](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo3.gif)
@@ -141,7 +145,13 @@ $('.pages').parallax({
 	swipeAnim: 'default'
 });
 </script>
+```
 
+__DEMO4__
+
+![DEMO4](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo4.gif)
+
+```js
 // DEMO5
 <script>
 $('.pages').parallax({
@@ -149,10 +159,6 @@ $('.pages').parallax({
 });
 </script>
 ```
-
-__DEMO4__
-
-![DEMO4](https://raw.githubusercontent.com/hahnzhu/parallax.js/master/assets/gif/demo4.gif)
 
 __DEMO5__
 
