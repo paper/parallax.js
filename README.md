@@ -182,7 +182,7 @@ __DEMO5__
 ### 四、内置动画
 有四种内置动画，分别是 `slideToTop/Bottom/Left/Right`、 `fadeInToTop/Bottom/Left/Right`、 `followSlide` 和 `fadeIn/Out`，动画参数可通过 `data-animation`、 `data-duration`、 `data-delay` 和 `data-timing-function` 进行配置。
 
-`data-duration` 默认值为 500ms，`data-timing-function` 默认值为 0.
+`data-duration` 默认值为 500ms，`data-delay` 默认为0，`data-timing-function` 默认值为 ease.
 
 可看以下实例：
 
