@@ -79,8 +79,8 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
 		curPage 	= 0;
 		direction	= 'stay';
         pageCount   = $pageArr.length;           	// 获取 page 数量
-        pageWidth   = $(window).width();         	// 获取手机屏幕宽度
-        pageHeight  = $(window).height();       	// 获取手机屏幕高度
+        pageWidth   = document.documentElement.clientWidth;     // 获取手机屏幕宽度
+        pageHeight  = document.documentElement.clientHeight;    // 获取手机屏幕高度
         $animateDom = $('[data-animation]');	 	// 获取动画元素节点
 
         for (var i=0; i<pageCount; i++) {          // 批量添加 data-id
