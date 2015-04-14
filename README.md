@@ -43,10 +43,10 @@ parallax.js 特效组件已加入 FrozenUI 中，[详情猛击](https://github.c
 
 CSS 引用：
 ```css
-<style rel="stylesheet" href="path/to/parallax.css"></style>
+<link rel="stylesheet" href="path/to/parallax.css" />
 
 /* 如果需要使用内置动画，需要引用下面的内容 */
-<style rel="stylesheet" href="path/to/parallax-animation.css"></style>
+<link rel="stylesheet" href="path/to/parallax-animation.css" />
 ```
 
 JS 引用：
