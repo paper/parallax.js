@@ -23,10 +23,22 @@ section[data-id="2"] {
 }
 
 
+/*第3屏*/
+section[data-id="3"] {
+  background:url(../images/bg1.png) no-repeat;
+  background-size:cover;
+}
 
 
+/*第4屏*/
+section[data-id="4"] {
+  background:url(../images/bg1.png) no-repeat;
+  background-size:cover;
+}
 
 
-
-
-
+/*第5屏*/
+section[data-id="5"] {
+  background:url(../images/bg1.png) no-repeat;
+  background-size:cover;
+}

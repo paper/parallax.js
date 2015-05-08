@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.item{
+  position:absolute;
+}
+.item-in img{
+  width:100%;
+}
+
+/*第1屏*/
+section[data-id="1"] {
+  background-color:#A91736;
+  background-image:url(../images/bianfuxia.webp);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+/*第2屏*/
+section[data-id="2"] {
+  background-color:#CAB38B;
+}
+
+/*第3屏*/
+section[data-id="3"] {
+  background-color:#FDDE5C;
+}
+
+/*第4屏*/
+section[data-id="4"] {
+  background-color:#588739;
+}
+
+/*第5屏*/
+section[data-id="5"] {
+  background-color:#BD734E;
+}
+
+/*第6屏*/
+section[data-id="6"] {
+  background-color:#F3E075;
+}
+
+/*第7屏*/
+section[data-id="7"] {
+  background-color:#EBCF7D;
+}
+
+/*第8屏*/
+section[data-id="8"] {
+  background-color:#261730;
+}
+
+section[data-id="8"] .btn{
+  color: #fff;
+  display:block;
+  font-size: 14px;
+  padding: 10px 0;
+  text-align:center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+
+

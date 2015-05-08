@@ -79,6 +79,9 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
 		curPage 	= 0;
 		direction	= 'stay';
         pageCount   = $pageArr.length;           	// 获取 page 数量
+        
+        //@paper
+        //添加自定义宽高
         pageWidth   = options.width  || document.documentElement.clientWidth;     // 获取手机屏幕宽度
         pageHeight  = options.height || document.documentElement.clientHeight;    // 获取手机屏幕高度
         $animateDom = $('[data-animation]');	 	// 获取动画元素节点
@@ -450,7 +453,11 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
                 $animation  = $element.attr('data-animation'),
                 $duration   = $element.attr('data-duration') || 500,
                 $timfunc    = $element.attr('data-timing-function') || 'ease',
-                $delay      = $element.attr('data-delay') ?  $element.attr('data-delay') : 0;
+                $delay      = $element.attr('data-delay') ?  $element.attr('data-delay') : 0,
+                
+                //@paper
+                //添加 iteration-count
+                $iterationCount = $element.attr('data-iteration-count') || 1;
 
 
 			if ($animation === 'followSlide') {
@@ -482,7 +489,10 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
 				'-webkit-animation-timing-function': 'ease',
 				'-webkit-animation-timing-function': $timfunc,
 				'-webkit-animation-delay': $delay + 'ms',
-				'-webkit-animation-fill-mode': 'both'
+				'-webkit-animation-fill-mode': 'both',
+        
+        //@paper
+        '-webkit-animation-iteration-count': $iterationCount
             })
         });
     }

@@ -97,7 +97,7 @@ html,body {
 	box-orient:horizontal;
 	box-pack:center;
 	box-align:center;
-	background:rgba(0,0,0,0.8);
+	background:rgba(0,0,0,0.9);
 	color:#000
 }
 .ui-loading-white {

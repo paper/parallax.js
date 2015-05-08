@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.item{
+  position:absolute;
+}
+.item-in img{
+  width:100%;
+}
+
+section.page{
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+}
+
+/*第1屏*/
+section[data-id="1"] {
+  background-image:url(../images/bg/1.jpg);
+}
+
+/*第2屏*/
+section[data-id="2"] {
+  background-image:url(../images/bg/2.jpg);
+}
+
+/*第3屏*/
+section[data-id="3"] {
+  background-image:url(../images/bg/3_看图王.web.jpg);
+  background-color:#F56367;
+}
+
+/*第4屏*/
+section[data-id="4"] {
+  background-image:url(../images/bg/4_看图王.web.jpg);
+  background-color:#E9B543;
+}
+
+/*第5屏*/
+section[data-id="5"] {
+  background-image:url(../images/bg/5_看图王.web.jpg);
+  background-color:#6AC2AD;
+}
+
+/*第6屏*/
+section[data-id="6"] {
+  background-image:url(../images/bg/2.jpg);
+}
+
+section[data-id="6"] .btn{
+  color: #fff;
+  background-color: #6EA2D4;
+  display: block;
+  font-size: 20px;
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+
+
+
+
+
