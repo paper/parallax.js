@@ -86,6 +86,10 @@ html,body {
 	-webkit-transition:-webkit-transform ease 300ms;
 	transition:transform ease 300ms
 }
+/*@paper*/
+.page img{
+  pointer-events: none;
+}
 .parallax-loading {
 	position:fixed;
 	top:0;
