@@ -86,15 +86,15 @@ html,body {
 	-webkit-transition:-webkit-transform ease 300ms;
 	transition:transform ease 300ms
 }
-/*@paper*/
+/*@paper
 .page img{
   pointer-events: none;
-}
+}*/
 .parallax-loading {
 	position:fixed;
 	top:0;
 	left:0;
-	width:100%;
+	width:100%;z
 	height:100%;
 	z-index:999;
 	display:box;

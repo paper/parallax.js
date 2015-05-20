@@ -67,12 +67,13 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
   function _prefixStyle (style) {
     if ( _vendor === false ) return false;
     if ( _vendor === '' ) return style;
-    return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
+    //return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
+    return '-' + _vendor + '-' + style;
   }
   
   var _transform = _prefixStyle('transform');
   var _animation = _prefixStyle('animation');
-  
+
   /* From Modernizr */
   function whichTransitionEvent(){
     var t;  
@@ -195,6 +196,7 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
   function onStart(e) {
   
     if (movePrevent === true) {
+      
       event.preventDefault();
       return false;
     }
@@ -206,23 +208,24 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
     touchDown = true;	// 手指已按下
 
     //options.direction === 'horizontal' ? startPos = e.pageX : startPos = e.pageY;
-    
+
     //@paper
     options.direction === 'horizontal' ? startPos = point.pageX : startPos = point.pageY;
-    
-    if (options.swipeAnim === 'default') {
-      $pages.addClass('drag');    // 阻止过渡效果
 
+    if (options.swipeAnim === 'default') {
+    
+      $pages.addClass('drag');    // 阻止过渡效果
+      
       offset = $pages.css( _transform )
                   .replace("matrix(", "")
                   .replace(")", "")
                   .split(",");
-
+      
       options.direction === 'horizontal' ?
           offset = parseInt(offset[4]) :
           offset = parseInt(offset[5]);
     }
-
+    
     if ((options.swipeAnim === 'cover' && options.drag)) {
       $pageArr.addClass('drag');
     }
@@ -282,7 +285,6 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
       //@paper
       //添加pc端滑动
       var point = e.changedTouches ? e.changedTouches[0] : e;
-      console.log(point)
       touchDown = false;
       
       //options.direction === 'horizontal' ? endPos = e.pageX : endPos = e.pageY;
@@ -431,12 +433,14 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
         else if (action === 'forward' && options.drag) {
             $pageArr.removeClass('drag');
             $($pageArr[curPage-1]).addClass('back'); // 纯粹为了在动画结束后隐藏，不涉及 CSS 中定义的动画
-            $pageArr[curPage].style.webkitTransform = 'translate(0, 0)';
+            //$pageArr[curPage].style.webkitTransform = 'translate(0, 0)';
+            $($pageArr[curPage]).css(_transform, 'translate(0, 0)');
         }
         else if (action === 'backward' && options.drag) {
             $pageArr.removeClass('drag');
             $($pageArr[curPage+1]).addClass('back');
-            $pageArr[curPage].style.webkitTransform = 'translate(0, 0)';
+            //$pageArr[curPage].style.webkitTransform = 'translate(0, 0)';
+            $($pageArr[curPage]).css(_transform, 'translate(0, 0)');
         }
         else if (action === 'forward' && !options.drag) {
             $pages.addClass('animate');
@@ -615,34 +619,34 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
   $(window).on("load", function() {
 
       if (options.loading) {
-          $(".parallax-loading").remove();
-          movePrevent = false;
-          $($pageArr[curPage]).addClass('current');
-          options.onchange(curPage, $pageArr[curPage], direction);
-          animShow();
+        $(".parallax-loading").remove();
+        movePrevent = false;
+        $($pageArr[curPage]).addClass('current');
+        options.onchange(curPage, $pageArr[curPage], direction);
+        animShow();
       }
 
       if (options.indicator) {
-          movePrevent = false;
-    
-    var temp = options.direction === 'horizontal' ? 'parallax-h-indicator' : 'parallax-v-indicator'; 
+        movePrevent = false;
+  
+        var temp = options.direction === 'horizontal' ? 'parallax-h-indicator' : 'parallax-v-indicator'; 
 
-          $('.wrapper').append('<div class='+temp+'></div>');
-          var lists = '<ul>';
-          for (var i=1; i<=pageCount; i++) {
-              if (i===1) {
-                  lists += '<li class="current"></li>'
-              } else {
-                  lists += '<li></li>'
-              }
+        $('.wrapper').append('<div class='+temp+'></div>');
+        var lists = '<ul>';
+        for (var i=1; i<=pageCount; i++) {
+          if (i===1) {
+              lists += '<li class="current"></li>'
+          } else {
+              lists += '<li></li>'
           }
-          lists += '</ul>';
-          $('.'+temp).append(lists);
+        }
+        lists += '</ul>';
+        $('.'+temp).append(lists);
       }
 
       if (options.arrow) {
-          $pageArr.append('<span class="parallax-arrow"></span>');
-          $($pageArr[pageCount-1]).find('.parallax-arrow').remove();
+        $pageArr.append('<span class="parallax-arrow"></span>');
+        $($pageArr[pageCount-1]).find('.parallax-arrow').remove();
       }
   });
   

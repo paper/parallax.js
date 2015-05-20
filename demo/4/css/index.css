@@ -1,0 +1,207 @@
+@charset "utf-8";
+html,body{
+  background-color:#000;
+}
+.item{
+  position:absolute;
+}
+.item-in{
+  box-sizing: border-box;
+}
+.item-in img{
+  width:100%;
+}
+
+.w100{
+  width:100%;
+}
+.fw,
+.fw *{
+  font-weight:bold !important;
+}
+.tc{
+  text-align:center;
+}
+strong{
+  color:#E55507;
+}
+.m{
+  padding:0 24px;
+}
+.m p{
+  margin-bottom:16px;
+  font-size: 18px;
+  text-indent: 2em;
+  text-align: justify;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.m ol{
+  margin-bottom:16px;
+  padding:16px;
+  font-size:14px;
+  background-color:rgba(255,255,255,0.1);
+}
+.m ol li{
+  margin-bottom:0px;
+}
+
+.page{
+  color:#fff;
+  text-shadow:0 1px 1px rgba(0,0,0,0.5);
+}
+.title{
+  font-size:30px;
+}
+
+section{
+  background-size:100% 100% !important;
+}
+
+/*第1屏*/
+section[data-id="1"] {
+  background:url(../images/bg1.jpg) no-repeat;
+}
+.page-1 .foot{
+  
+}
+.page-1 .foot div{
+  margin:8px 50px;
+  height:1px;
+  background:#ccc;
+  
+}
+
+/*第2屏*/
+section[data-id="2"] {
+  background:url(../images/bg2.jpg) no-repeat;
+}
+.page-2 .m{
+  
+}
+
+/*第3屏*/
+section[data-id="3"] {
+  background:url(../images/bg3.jpg) no-repeat;
+}
+.page-3 .m{
+  
+}
+.page-3 .m ol{
+  
+}
+
+
+
+/*第4屏*/
+section[data-id="4"] {
+  background:url(../images/bg4.jpg) no-repeat;
+}
+
+.page-4{}
+.page-4 strong{
+  padding:0 10px;
+}
+.page-4 .t{
+  margin-bottom:35px;
+}
+
+.page-4 .m p{
+  text-indent:0;
+}
+
+.page-4 dl{
+  margin-top:40px;
+}
+.page-4 dl dt{
+  font-size:16px;
+  font-weight:bold;
+  padding:6px 0;
+  margin-bottom:10px;
+  border-bottom:1px solid #545F73;
+}
+.page-4 dl dd{
+  margin-bottom:6px;
+}
+
+.page-4 .face{
+  width:80px;
+}
+
+/*第5屏*/
+section[data-id="5"] {
+  background:url(../images/bg5.jpg) no-repeat;
+}
+
+.page-5 .m{
+  padding:0;
+}
+.page-5 .m p{
+  text-indent:0;
+}
+.page-5 h2{
+  font-size: 14px;
+}
+
+/*第6屏*/
+section[data-id="6"] {
+  background:url(../images/bg4.jpg) no-repeat;
+}
+
+
+/*iphone6*/
+@media screen and (max-width: 375px){
+  .page-4 dl{
+    margin-top:0;
+  }
+  .m p{
+    font-size:14px;
+  }
+}
+ 
+/*iphone5 & iphone4*/
+@media screen and (max-width: 320px){
+  .title{
+    font-size:24px;
+  }
+  .m{
+    padding: 0 26px;
+  }
+  .m ol{
+    font-size:12px;
+  }
+  .m ol li{
+    margin-bottom:0;
+  }
+  .m p{
+    font-size:12px;
+    margin-bottom:16px;
+  }
+  
+  .page-4 .face {
+    width: 20px;
+   }
+  .page-4 dl dt{
+    font-size:14px;
+  }
+  .page-4 dl dd{
+    font-size:12px;
+    margin-bottom:2px;
+  }
+  
+  .page-5 h2{
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

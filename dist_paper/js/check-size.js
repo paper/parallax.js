@@ -47,11 +47,11 @@ if( curPageWidth > iphone6p.width ){
     wrapperMargintop = (curPageHeight - parallaxHeight)/2;
     
     $('.wrapper').css({
-    width : parallaxWidth + "px",
-    height : parallaxHeight + "px",
-    transform : 'translateY('+ wrapperMargintop +'px)',
-    webKitTransform : 'translateY('+ wrapperMargintop +'px)'
-  });
+      width : parallaxWidth + "px",
+      height : parallaxHeight + "px",
+      transform : 'translateY('+ wrapperMargintop +'px)',
+      webKitTransform : 'translateY('+ wrapperMargintop +'px)'
+    });
     
   }
   
@@ -74,10 +74,12 @@ if( curPageWidth == iphone6p.width && curPageHeight == iphone6p.height ){
   
   var $itemIn = $(".item-in");
   $itemIn.each(function(v){
-    var w = parseInt( $(this).css("width"), 10 );
-    var newW = w * widthScale;
+    if( $(this).css("width").indexOf("%") == -1 ){
+      var w = parseInt( $(this).css("width"), 10 );
+      var newW = w * widthScale;
     
-    $(this).css("width", newW + "px");
+      $(this).css("width", newW + "px");
+    }
   });
   
   // 重新定位
