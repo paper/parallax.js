@@ -196,7 +196,6 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
   function onStart(e) {
   
     if (movePrevent === true) {
-      
       event.preventDefault();
       return false;
     }
@@ -241,17 +240,16 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
   // ==============================
 
   function onMove(e) {
-
+  
+    e.preventDefault();
+    
     if(movePrevent === true || touchDown === false){
-        e.preventDefault();
         return false;
     }
     
     //@paper
     //添加pc端滑动
     var point = e.changedTouches ? e.changedTouches[0] : e;
-    
-    e.preventDefault();
     
     //options.direction === 'horizontal' ? endPos = e.pageX : endPos = e.pageY;
     
@@ -358,7 +356,9 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
     if (options.swipeAnim === 'default') {
 
       var temp = offset + endPos - startPos;
-
+      
+      //if(temp < 10) return;
+      
       options.direction === 'horizontal' ?
           $pages.css(_transform, "matrix(1, 0, 0, 1, " + temp + ", 0)") :
           $pages.css(_transform, "matrix(1, 0, 0, 1, 0, " + temp + ")");
@@ -369,7 +369,9 @@ if (typeof Zepto === 'undefined') { throw new Error('Parallax.js\'s script requi
       var temp      =  endPos - startPos,
           $prevPage = $($pageArr[curPage-1]),
           $nextPage = $($pageArr[curPage+1]);
-
+      
+      //if(temp < 10) return;
+      
       $($pageArr).css({'z-index': 0});
       
       $prevPage.css({
